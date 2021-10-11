@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+    rel="stylesheet"/>
+  <link rel="stylesheet" href="./style.css">
+  <title>Düzce Tentación</title>
+</head>
+<body>
+  <header>
+    <h1>Düzce Tentación</h1>
+  </header>
+  <section>
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <div class="card custom-card col-4 col-md-4 col-lg-4">
+          <div class="card-body custom-div-car">
+            <h5 class="card-title custom-card-title">Haz el pedido ya!</h5>
+            <form action="" class="custom-form" name="cakeOrders">
+              <label for="portions">Porciones</label>
+              <select name="portions" id="portions">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="70">70</option>
+              </select> 
+              <label for="pastries">Masas</label>
+              <select name="pastries" id="pastries">
+                <option value="banano">Banano</option>
+                <option value="vainilla">Vainilla</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="red-velvet">Red Velvet</option>
+                <option value="frutos-rojos">Frutos Rojos</option>
+              </select>
+              <label for="glaze">Glaceado</label>
+              <select name="glaze" id="glaze">
+                <option value="nutella">Nutella</option>
+                <option value="ganache">Ganache</option>
+                <option value="vainilla">Vainilla</option>
+                <option value="arequipe">Arequipe</option>
+                <option value="frutos-rojos">Frutos Rojos</option>
+              </select>     
+              <label for="decoration">Decoración</label>
+              <select name="decoration" id="decoration">
+                <option value="fondat">Fondant</option>
+                <option value="chocolate-modelar">Chocolate para modelar</option>
+                <option value="ganache-chocolate-negro">Chocolate Negro</option>
+                <option value="ganache-chocolate-blanco">Chocolate Blanco</option>
+                <option value="ganache-chocolate-leche">Chocolate Leche</option>
+              </select>  
+              <label for="">Fecha de compra</label>
+              <input type="date" id="orderDate" name="orderDate">          
+              <button type="button" class="btn btn-outline-secondary" onclick="newOrder.add()">Realizar pedido</button>
+              <button type="button" class="btn btn-info" onclick="newOrder.refreshData()">Cancelar</button>            
+            </form>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-12" style = "float: left">
+            <table class="table align-middle custom-table">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Porciones</th>
+                  <th scope="col">Masa</th>
+                  <th scope="col">Glaceado</th>
+                  <th scope="col">Decoracion</th>
+                  <th scope="col">Fecha de compra</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
